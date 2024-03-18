@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --LightGrayishViolet: hsl(270, 3%, 87%);
+  --DarkGrayishViolet: hsl(279, 6%, 55%);
+  --VeryDarkViolet: hsl(278, 68%, 11%);
+}
+
+body {
+  height: 100vh;
+}
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.leftDiv {
+  width: 45%;
+  background-image: url(/images/bg-main-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.rightDiv {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 40%;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--VeryDarkViolet);
+}
+
+input {
+  margin-bottom: 5px;
+  padding: 5px 5px;
+  width: 100%;
+}
+
+input:hover {
+  background-color: rgb(247, 247, 247);
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+.dateCardInputs {
+  display: flex;
+}
+
+.expDate input {
+  width: 40%;
+}
+
+#confirmBtn {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  padding: 8px;
+  background-color: var(--VeryDarkViolet);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+}
+
+#confirmBtn:hover {
+  cursor: pointer;
+  background-color: hsl(200, 90%, 11%);
+}
+
+#frontSideCard {
+  position: absolute;
+  background-image: url(/images/bg-card-front.png);
+  background-position: cover;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  top: 12%;
+  left: 25%;
+}
+
+.cardLogo {
+  width: 70px;
+}
+
+.frontCardNumber {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 22px;
+  color: var(--white);
+}
+
+.frontCardData {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--white);
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+#backSideCard {
+  position: absolute;
+  background-image: url(/images/bg-card-back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  bottom: 12%;
+  left: 30%;
+}
+
+#cvcBackSide {
+  position: absolute;
+  top: 45%;
+  right: 12%;
+  font-size: 12px;
+  color: var(--white);
+}
+
+.thanks {
+  text-align: center;
+}
+
+.thanks img {
+  width: 50px;
+  margin-bottom: 25px;
+}
+
+.thanks h1 {
+  margin-bottom: 30px;
+}
+
+.thanks p {
+  color: var(--DarkGrayishViolet);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.errorParagraph {
+  margin-top: 0;
+  color: red;
+  font-size: 12px;
+}
+
+.errorInput {
+  border: 2px solid red;
+}
+
+@media only screen and (max-width: 1200px) {
+  #frontSideCard {
+    left: 15%;
+  }
+
+  #backSideCard {
+    left: 20%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #frontSideCard {
+    left: 7%;
+  }
+
+  #backSideCard {
+    left: 13%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    overflow: scroll;
+  }
+
+  .leftDiv {
+    height: 600px;
+    width: 100%;
+  }
+
+  .rightDiv {
+    width: 100%;
+  }
+
+  #frontSideCard {
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.7);
+  }
+
+  #backSideCard {
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.7);
+  }
+}

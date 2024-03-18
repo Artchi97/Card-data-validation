@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="leftDiv"></div>
+      <div class="rightDiv">
+        <form id="inputsForm">
+          <label for="nameInput" class="cardForm">CARDHOLDER NAME</label><br />
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="e.g. Jane Appleseed"
+          /><br />
+          <p id="nameError" class="errorParagraph"></p>
+          <label for="cardNumber">CARD NUMBER</label><br />
+          <input
+            type="text"
+            id="cardNumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+          /><br />
+          <p id="cardNumberError" class="errorParagraph"></p>
+          <div class="dateCardInputs">
+            <div class="expDate">
+              <label for="expDateInput">EXP. DATE (MM/YY)</label><br />
+              <input type="text" id="expDateInputMM" placeholder="MM" />
+              <input type="text" id="expDateInputYY" placeholder="YY" />
+              <p id="expDateError" class="errorParagraph"></p>
+            </div>
+            <div class="cvc">
+              <label for="cvcInput">CVC</label><br />
+              <input type="text" id="cvcInput" placeholder="e.g. 123" />
+              <p id="cvcError" class="errorParagraph"></p>
+            </div>
+          </div>
+          <button type="submit" id="confirmBtn">Confirm</button>
+        </form>
+        <div class="thanks hidden">
+          <img src="/images/icon-complete.svg" />
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details</p>
+          <button type="button" id="confirmBtn" class="continueBtn">
+            Continue
+          </button>
+        </div>
+      </div>
+      <div id="frontSideCard">
+        <img class="cardLogo" src="/images/card-logo.svg" />
+        <p class="frontCardNumber">0000 0000 0000 0000</p>
+        <div class="frontCardData">
+          <p class="fullNameOnFrontCard">JANE APPLESEED</p>
+          <p class="dateOnFrontCard">
+            <span id="month">00</span>/<span id="year">00</span>
+          </p>
+        </div>
+      </div>
+      <div id="backSideCard">
+        <span id="cvcBackSide">000</span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
